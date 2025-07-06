@@ -25,10 +25,6 @@ Design dynamic pricing for 14 urban parking spots based on:
 
 ## 🏗️ System Architecture
 
-![System Architecture](https://www.github.com/mkj-1901/Dynamic-Urban-Parking/output/Architecture.png)
-
-_Made with help of mermaid:_
-
 ```mermaid
 ---
 config:
