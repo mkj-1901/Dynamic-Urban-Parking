@@ -13,7 +13,65 @@ Design dynamic pricing for 14 urban parking spots based on:
 - Competitive nearby prices
 
 ---
+## 🛠️ Tech Stack
 
+- **Python**: Core programming language for data processing and modeling
+- **Pandas, NumPy**: Data manipulation and numerical operations
+- **Jupyter Notebook**: Prototyping and experimentation
+- **Pathway**: Real-time data streaming and processing
+- **Bokeh**: Interactive data visualization
+
+---
+
+## 🏗️ System Architecture
+
+![System Architecture](https://www.github.com/mkj-1901/Dynamic-Urban-Parking/output/Architecture.png)
+
+_Made with help of mermaid:_
+
+```mermaid
+---
+config:
+  theme: neo-dark
+  layout: fixed
+  look: neo
+---
+flowchart TD
+    B["Load &amp; Read Data"] --> C["Feature Engineering"]
+    n1["Import Libararies"] --> B
+    C --> n2["df_transformed"]
+    n2 --> n6["Model 3"] & n16["Live Data Streaming<br>(Using pathway)"] & n5["EDA"] & n23["Model 2"] & n24["Model 1"]
+    n6 --> n16 & n20["Plot"]
+    A["df<br>(dataset.csv)"] --> B
+    n16 --> n17["Bokeh Plotting"]
+    n5 --> n21["Plot"]
+    n23 --> n19["Plot"]
+    n24 --> n22["Plot"]
+    B@{ shape: rect}
+    n1@{ shape: rect}
+    n2@{ shape: das}
+    n6@{ shape: event}
+    n16@{ shape: procs}
+    n5@{ shape: event}
+    n23@{ shape: event}
+    n24@{ shape: event}
+    n20@{ shape: extract}
+    A@{ shape: db}
+    n17@{ shape: event}
+    n21@{ shape: extract}
+    n19@{ shape: extract}
+    n22@{ shape: extract}
+
+```
+
+- **Data Sources**: Real-time occupancy, traffic, events, and competitor prices
+- **Data Ingestion**: Streamed and processed using Pathway
+- **Feature Engineering**: Transform raw data into model-ready features
+- **Model Selection**: Apply and compare pricing models
+- **Dynamic Pricing Engine**: Computes optimal prices per spot
+- **Visualization**: Live dashboards for monitoring and insights
+
+--- 
 ## 📊 Dataset Overview
 
 ![image](https://github.com/user-attachments/assets/b3983316-1774-47ce-b019-b065d84f0b1a)
