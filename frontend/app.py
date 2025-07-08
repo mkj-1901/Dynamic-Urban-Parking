@@ -82,7 +82,7 @@ if selected == "predict":
             )
             if response.status_code == 200:
                 result = response.json()
-                st.success(f"💰 Predicted Parking Price: ₹{result['price']}")
+                st.success(f"💰 Predicted Parking Price: ${result['price']}")
                 st.info(f"🚣️ Expected Traffic: {result['ExpectedTrafficNearby']}")
                 if result["reroute_to"]:
                     st.warning(f"📍 Suggested Alternate Slot: {result['reroute_to']}")
