@@ -1,9 +1,14 @@
+import numpy as np
+import pandas as pd
 import streamlit as st
 import requests
 from datetime import datetime
-import sys
-import os
+from streamlit_bokeh import streamlit_bokeh
+from bokeh.plotting import figure
+from bokeh.models import ColumnDataSource
 
+import os
+import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend')))
 from pydantic_models import meta_dict, vehicle_map
 
@@ -92,26 +97,6 @@ if selected == "predict":
 
 elif selected == "visualize":
     st.subheader("📊 Parking Data Visualizations")
-
-    st.header("1. 📈 Exploratory Data Analysis (EDA)")
-    st.image("output/Latitude_Longitude.png", caption="Distribution of Parking Spots", use_container_width=True)
-    st.image("output/QueueLength_AvgTrafficConditionNearby.png", caption="QueueLength vs AvgTrafficConditionNearby",
-             use_container_width=True)
-    st.image("output/QueueLength_SpecialDay.png", caption="QueueLength vs SpecialDay", use_container_width=True)
-    st.image("output/QueueLength_TimeofDay.png", caption="QueueLength vs Time of Day", use_container_width=True)
-
-    st.header("2. 🤖 Model Comparison")
-    st.image("output/Model1.png", caption="Model 1 - Price with time", use_container_width=True)
-    st.image("output/Model2.png", caption="Model 2 - Price with time", use_container_width=True)
-    st.image("output/Model3.png", caption="Model 3 - Price with time", use_container_width=True)
-
-    import pandas as pd
-    import numpy as np
-    import streamlit as st
-    from streamlit_bokeh import streamlit_bokeh
-    from bokeh.plotting import figure
-    from bokeh.models import ColumnDataSource
-
     st.subheader("🗺️ Interactive Bokeh Visualization")
 
     st.markdown("### Dynamic Parking Price Plot")
@@ -177,3 +162,15 @@ elif selected == "visualize":
 
                 # ✅ Render the plot using streamlit_bokeh
                 streamlit_bokeh(plot)
+
+    st.header("📈 Exploratory Data Analysis (EDA)")
+    st.image("output/Latitude_Longitude.png", caption="Distribution of Parking Spots", use_container_width=True)
+    st.image("output/QueueLength_AvgTrafficConditionNearby.png", caption="QueueLength vs AvgTrafficConditionNearby",
+             use_container_width=True)
+    st.image("output/QueueLength_SpecialDay.png", caption="QueueLength vs SpecialDay", use_container_width=True)
+    st.image("output/QueueLength_TimeofDay.png", caption="QueueLength vs Time of Day", use_container_width=True)
+
+    st.header("🤖 Model Comparison")
+    st.image("output/Model1.png", caption="Model 1 - Price with time", use_container_width=False)
+    st.image("output/Model2.png", caption="Model 2 - Price with time", use_container_width=False)
+    st.image("output/Model3.png", caption="Model 3 - Price with time", use_container_width=False)
