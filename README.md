@@ -3,8 +3,13 @@
 This project builds a smart, data-driven parking pricing system using machine learning and real-time streaming.
 
 ---
+## 🚀Check out the working 
+- Streamlit application : https://dynamic-urban-parking.streamlit.app/
+- Colab Notebook : [Dynamic_Urban_Parking.ipynb](https://colab.research.google.com/drive/1WQZsQeInsULlSrtqpuDj28zQ1aK5cBv1?usp=sharing)
+- Report : [Dynamic_Urban_Parking_Report.pdf](https://github.com/mkj-1901/Dynamic-Urban-Parking/Dynamic_Urban_Parking_Report.pdf)
+---
 
-## 📌 Problem Statement
+## 📌 Problem Statement ([↗](https://colab.research.google.com/drive/1WQZsQeInsULlSrtqpuDj28zQ1aK5cBv1?usp=sharing))
 
 Design dynamic pricing for 14 urban parking spots based on:
 - Occupancy and queue length
