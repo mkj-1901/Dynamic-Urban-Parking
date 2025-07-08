@@ -1,0 +1,26 @@
+# 🧠 Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 📓 Jupyter Notebooks and checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# 📄 Documents and reports
+*.pdf
+
+# 📦 Local data/output folders not needed in container
+output/
+input/
+
+# 🎨 Frontend (assuming it's deployed separately)
+frontend/
+
+# 🧪 Optional: Git and OS artifacts
+*.log
+*.db
+.DS_Store
+.env
+.env.*

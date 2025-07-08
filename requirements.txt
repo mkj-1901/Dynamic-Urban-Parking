@@ -1,10 +1,13 @@
-streamlit>=1.37.1
-requests>=2.32.3
+fastapi>=0.115.14
+pydantic>=2.11.7
 numpy>=1.26.4
 pandas>=2.2.2
+requests>=2.32.3
+streamlit>=1.46.1
+bokeh>=3.7.3
 matplotlib>=3.9.2
 seaborn>=0.13.2
 plotly>=5.24.1
 pathway>=0.post1
-bokeh>=3.6.0
 panel>=1.5.2
+uvicorn>=0.35.0
