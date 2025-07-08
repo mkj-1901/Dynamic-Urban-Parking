@@ -171,6 +171,6 @@ elif selected == "visualize":
     st.image("output/QueueLength_TimeofDay.png", caption="QueueLength vs Time of Day", use_container_width=True)
 
     st.header("🤖 Model Comparison")
-    st.image("output/Model1.png", caption="Model 1 - Price with time", use_container_width=False)
-    st.image("output/Model2.png", caption="Model 2 - Price with time", use_container_width=False)
-    st.image("output/Model3.png", caption="Model 3 - Price with time", use_container_width=False)
+    st.image("output/Model1.png", caption="Linear Baseline Model - Price with time", use_container_width=False)
+    st.image("output/Model2.png", caption="Demand Based Model - Price with time", use_container_width=False)
+    st.image("output/Model3.png", caption="Competetive Pricing Model (Location Aware) - Price with time", use_container_width=False)
